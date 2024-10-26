@@ -396,7 +396,38 @@ RETURN s,r,c,e1,e2,e3;
 
 
 # Visitas
-CREATE (v:Visita {fecha: date('2024-03-15'), hora: time('10:00'), motivo: 'Revisión de instalaciones'})
-MATCH (s:Sucursal {clave: 'SUC1'}), (c:Cliente {nombre: 'Acme Corp'})
-CREATE (s)-[v:VISITADA_POR]->(v);
-CREATE (v)-[r:REALIZADA_POR]->(c);
+CREATE (v:Visita {fecha: date('2024-03-15'), hora: time('12:00'), motivo: 'Revisión de proyecto 1'})
+MATCH (s:Sucursal {clave: 'SUC1'})
+MATCH (c:Cliente {nombre: 'Acme Corp'})
+CREATE (s)-[vi:VISITA]->(v)
+CREATE (v)-[r:REALIZADA_POR]->(c)
+RETURN s, vi, v, r, c;
+
+CREATE (v:Visita {fecha: date('2024-04-16'), hora: time('13:00'), motivo: 'Revisión de proyecto 2'})
+MATCH (s:Sucursal {clave: 'SUC2'})
+MATCH (c:Cliente {nombre: 'Global Solutions'})
+CREATE (s)-[vi:VISITA]->(v)
+CREATE (v)-[r:REALIZADA_POR]->(c)
+RETURN s, vi, v, r, c;
+
+CREATE (v:Visita {fecha: date('2024-05-17'), hora: time('14:00'), motivo: 'Revisión de proyecto 3'})
+MATCH (s:Sucursal {clave: 'SUC3'})
+MATCH (c:Cliente {nombre: 'Innovatech'})
+CREATE (s)-[vi:VISITA]->(v)
+CREATE (v)-[r:REALIZADA_POR]->(c)
+RETURN s, vi, v, r, c;
+
+CREATE (v:Visita {fecha: date('2024-06-18'), hora: time('15:00'), motivo: 'Revisión de proyecto 4'})
+MATCH (s:Sucursal {clave: 'SUC4'})
+MATCH (c:Cliente {nombre: 'NextGen Industries'})
+CREATE (s)-[vi:VISITA]->(v)
+CREATE (v)-[r:REALIZADA_POR]->(c)
+RETURN s, vi, v, r, c;
+
+CREATE (v:Visita {fecha: date('2024-07-19'), hora: time('16:00'), motivo: 'Revisión de proyecto 5'})
+MATCH (s:Sucursal {clave: 'SUC5'})
+MATCH (c:Cliente {nombre: 'Prime Services'})
+CREATE (s)-[vi:VISITA]->(v)
+CREATE (v)-[r:REALIZADA_POR]->(c)
+RETURN s, vi, v, r, c;
+
