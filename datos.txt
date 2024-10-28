@@ -89,51 +89,51 @@ MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 
 
 MERGE (p:Proyecto {codigo: 'Proyecto1', nombre: 'Proyecto 1', descripcion: 'Algo algo este es el proyecto 1', fecha_inicio: date('2024-01-01'), fecha_fin: date('2024-08-11'), presupuesto: 50000}) RETURN p;
-MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado:Gerente {CURP: 'GOMA901202MDFRRN03'})
+MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado {CURP: 'GOMA901202MDFRRN03'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado:Desarrollador {CURP: 'HEFE881231HDFRRD02'})
+MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado {CURP: 'HEFE881231HDFRRD02'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado:Soporte {CURP: 'DOFR870201HDFRRN04'})
+MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado {CURP: 'DOFR870201HDFRRN04'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC1'}), (p:Proyecto {codigo: 'Proyecto1'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
 MERGE (p:Proyecto {codigo: 'Proyecto2', nombre: 'Proyecto 2', descripcion: 'Algo algo este es el proyecto 2', fecha_inicio: date('2024-02-02'), fecha_fin: date('2024-09-12'), presupuesto: 60000}) RETURN p;
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Gerente {CURP: 'MOLU900101HDFRRR01'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'MOLU900101HDFRRR01'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Desarrollador {CURP: 'CASA900201MDFRRC06'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'CASA900201MDFRRC06'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Soporte {CURP: 'CRER881202HDFRRJ03'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'CRER881202HDFRRJ03'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC2'}), (p:Proyecto {codigo: 'Proyecto2'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
 MERGE (p:Proyecto {codigo: 'Proyecto3', nombre: 'Proyecto 3', descripcion: 'Algo algo este es el proyecto 3', fecha_inicio: date('2024-03-03'), fecha_fin: date('2024-10-13'), presupuesto: 70000}) RETURN p;
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Gerente {CURP: 'LOMA890303MDFRTR09'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'LOMA890303MDFRTR09'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Desarrollador {CURP: 'JIRO850102HDFRMS05'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'JIRO850102HDFRMS05'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Soporte {CURP: 'NAAL900101HDFRRJ06'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'NAAL900101HDFRRJ06'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC3'}), (p:Proyecto {codigo: 'Proyecto3'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
 MERGE (p:Proyecto {codigo: 'Proyecto4', nombre: 'Proyecto 4', descripcion: 'Algo algo este es el proyecto 4', fecha_inicio: date('2024-04-04'), fecha_fin: date('2024-11-14'), presupuesto: 80000}) RETURN p;
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Gerente {CURP: 'SACA910202HDFRLD04'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'SACA910202HDFRLD04'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Desarrollador {CURP: 'VAMI871231HDFRRN04'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'VAMI871231HDFRRN04'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Soporte {CURP: 'VIRO870102HDFRRN02'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'VIRO870102HDFRRN02'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC4'}), (p:Proyecto {codigo: 'Proyecto4'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
 MERGE (p:Proyecto {codigo: 'Proyecto5', nombre: 'Proyecto 5', descripcion: 'Algo algo este es el proyecto 5', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 90000}) RETURN p;
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Gerente {CURP: 'RAJU871230MDFRRJ07'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'RAJU871230MDFRRJ07'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Desarrollador {CURP: 'GUJA890203HDFRRR07'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'GUJA890203HDFRRR07'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Soporte {CURP: 'LOOS900303HDFRRR01'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'LOOS900303HDFRRR01'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC5'}), (p:Proyecto {codigo: 'Proyecto5'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;

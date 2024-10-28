@@ -42,7 +42,7 @@ Proyectos:
     - Los proyectos tienen un código, nombre, descripción, fecha de inicio, fecha de finalización y un presupuesto 
       asignado.
     - Cada proyecto es gestionado por un gerente y puede tener varios desarrolladores trabajando en él.
-    - Un proyecto es  desarrollado en una sucursal específica, pero puede involucrar a empleados de otras sucursales.
+    - Un proyecto es desarrollado en una sucursal específica, pero puede involucrar a empleados de otras sucursales.
 
 Proyectos: - (Nodo)
     - Código - (Atributo)
@@ -239,11 +239,11 @@ MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 <!-- Proyecto 2 -->
 MERGE (p:Proyecto {codigo: 'Proyecto2', nombre: 'Proyecto 2', descripcion: 'Algo algo este es el proyecto 2', fecha_inicio: date('2024-02-02'), fecha_fin: date('2024-09-12'), presupuesto: 60000}) RETURN p;
 <!-- Relaciones de proyecto - Gerente 2, Desarrollador 2-1, Soporte 3-1 -->
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Gerente {CURP: 'MOLU900101HDFRRR01'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'MOLU900101HDFRRR01'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Desarrollador {CURP: 'CASA900201MDFRRC06'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'CASA900201MDFRRC06'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado:Soporte {CURP: 'CRER881202HDFRRJ03'})
+MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'CRER881202HDFRRJ03'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 <!-- Relación Proyecto - Sucursal -->
 MATCH (s:Sucursal {clave: 'SUC2'}), (p:Proyecto {codigo: 'Proyecto2'})
@@ -253,11 +253,11 @@ MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 <!-- Proyecto 3 -->
 MERGE (p:Proyecto {codigo: 'Proyecto3', nombre: 'Proyecto 3', descripcion: 'Algo algo este es el proyecto 3', fecha_inicio: date('2024-03-03'), fecha_fin: date('2024-10-13'), presupuesto: 70000}) RETURN p;
 <!-- Relaciones de proyecto - Gerente 3, Desarrollador 3-1, Soporte 4-1 -->
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Gerente {CURP: 'LOMA890303MDFRTR09'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'LOMA890303MDFRTR09'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Desarrollador {CURP: 'JIRO850102HDFRMS05'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'JIRO850102HDFRMS05'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado:Soporte {CURP: 'NAAL900101HDFRRJ06'})
+MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'NAAL900101HDFRRJ06'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 <!-- Relación Proyecto - Sucursal -->
 MATCH (s:Sucursal {clave: 'SUC3'}), (p:Proyecto {codigo: 'Proyecto3'})
@@ -267,11 +267,11 @@ MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 <!-- Proyecto 4 -->
 MERGE (p:Proyecto {codigo: 'Proyecto4', nombre: 'Proyecto 4', descripcion: 'Algo algo este es el proyecto 4', fecha_inicio: date('2024-04-04'), fecha_fin: date('2024-11-14'), presupuesto: 80000}) RETURN p;
 <!-- Relaciones de proyecto - Gerente 4, Desarrollador 4-1, Soporte 5-1 -->
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Gerente {CURP: 'SACA910202HDFRLD04'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'SACA910202HDFRLD04'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Desarrollador {CURP: 'VAMI871231HDFRRN04'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'VAMI871231HDFRRN04'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado:Soporte {CURP: 'VIRO870102HDFRRN02'})
+MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'VIRO870102HDFRRN02'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 <!-- Relación Proyecto - Sucursal -->
 MATCH (s:Sucursal {clave: 'SUC4'}), (p:Proyecto {codigo: 'Proyecto4'})
@@ -281,11 +281,11 @@ MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 <!-- Proyecto 5 -->
 MERGE (p:Proyecto {codigo: 'Proyecto5', nombre: 'Proyecto 5', descripcion: 'Algo algo este es el proyecto 5', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 90000}) RETURN p;
 <!-- Relaciones de proyecto - Gerente 5, Desarrollador 5-1, Soporte 1-1 -->
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Gerente {CURP: 'RAJU871230MDFRRJ07'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'RAJU871230MDFRRJ07'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Desarrollador {CURP: 'GUJA890203HDFRRR07'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'GUJA890203HDFRRR07'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
-MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado:Soporte {CURP: 'LOOS900303HDFRRR01'})
+MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'LOOS900303HDFRRR01'})
 MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 <!-- Relación Proyecto - Sucursal -->
 MATCH (s:Sucursal {clave: 'SUC5'}), (p:Proyecto {codigo: 'Proyecto5'})
@@ -298,6 +298,7 @@ MERGE (c:Cliente {nombre: 'Global Solutions',    empresa: 'Global Solutions',   
 MERGE (c:Cliente {nombre: 'Innovatech',          empresa: 'Innovatech',          telefono: '5576543210', correo: 'contacto@innovatech.com'})       RETURN c;
 MERGE (c:Cliente {nombre: 'NextGen Industries',  empresa: 'NextGen Industries',  telefono: '5565432109', correo: 'support@nextgenindustries.com'}) RETURN c;
 MERGE (c:Cliente {nombre: 'Prime Services',      empresa: 'Prime Services',      telefono: '5554321098', correo: 'hello@primeservices.com'})       RETURN c;
+MERGE (c:Cliente {nombre: 'El que no visita',    empresa: 'No visita',           telefono: '5543210987', correo: 'novisita@nunca.com'})            RETURN c;
 
 
 # Relaciones Cliente-Proyecto
@@ -431,3 +432,96 @@ MERGE (s)-[vi:VISITA]->(v)
 MERGE (v)-[r:REALIZADA_POR]->(c)
 RETURN s, vi, v, r, c;
 
+
+
+
+
+# Querys de Escenario
+Q00. Script del escenario de datos.
+datos.txt
+
+Q01. Obtener la lista de sucursales que tienen más de 5 empleados.
+MATCH (s:Sucursal)-[:TIENE_EMPLEADO]->(e:Empleado) WITH s,
+COUNT(e) AS numEmpleados
+WHERE numEmpleados > 5
+RETURN s.nombre;
+
+Q02. Encontrar los gerentes que gestionan más de 3 proyectos simultáneamente.
+MATCH (e:Empleado)-[:GESTIONA]->(p:Proyecto)
+WITH e, COUNT(p) AS numProyectos
+WHERE numProyectos > 3
+RETURN e;
+
+Q03. Obtener la lista de desarrolladores con especialización en back-end que están trabajando en más de 2 proyectos.
+MATCH (e:Empleado {especializacion: 'Backend'})-[:TRABAJA_EN]->(p:Proyecto)
+WITH e, COUNT(p) AS numProyectos
+WHERE numProyectos > 2
+RETURN e.nombre;
+
+Q04. Obtener la lista de proyectos que tienen un presupuesto mayor a $1,000,000.
+MATCH (p:Proyecto)
+WHERE p.presupuesto > 1000000
+RETURN p.nombre;
+
+Q05. Listar los empleados de soporte técnico de todas las sucursales
+MATCH (e:Empleado) WHERE e.tipo = 'Soporte Técnico' RETURN e.nombre;
+
+Q06. Encontrar los proyectos que corresponden a un cliente en específico.
+MATCH (c:Cliente {nombre: 'Acme Corp'})-[:CONTRATA]->(p:Proyecto)
+RETURN c.nombre AS Cliente, p.nombre AS Proyecto
+
+Q07. Obtener la lista de sucursales que han recibido visitas de más de 5 clientes diferentes.
+MATCH (s:Sucursal)-[:VISITA]->(v:Visita)
+MATCH (v)-[:REALIZADA_POR]->(c:Cliente)
+WITH s, COUNT(DISTINCT c) AS numClientes
+WHERE numClientes > 5
+RETURN s.nombre AS Sucursal, numClientes;
+
+Q08. Encontrar a los desarrolladores que han trabajado en proyectos con un presupuesto total mayor a $500,000.
+MATCH (Desarrollador)-[:TRABAJA_EN]->(p:Proyecto)
+WITH Desarrollador, SUM(p.presupuesto) AS totalPresupuesto
+WHERE totalPresupuesto > 500000
+RETURN Desarrollador.nombre, totalPresupuesto
+
+Q09. Obtener la lista de clientes que han contratado más de 3 proyectos en diferentes sucursales.
+MATCH (c:Cliente)-[:CONTRATA]->(p:Proyecto)-[:UBICADO_EN]->(s:Sucursal)
+WITH c, COUNT(DISTINCT s) AS numSucursales
+WHERE numSucursales > 3
+RETURN c.nombre AS Cliente, numSucursales
+
+Q10. Encontrar las sucursales que tienen más de 5 desarrolladores especializados en full-stack.
+MATCH (e:Empleado {especializacion: "Full-stack"})<-[:TIENE_EMPLEADO]-(s:Sucursal) WITH s,
+COUNT(s) as Cantidad
+WHERE Cantidad > 5 
+RETURN s.nombre;
+
+Q11. Transferir todos los empleados de soporte técnico de una sucursal en específico hacia otra sucursal.
+MATCH (s1:Sucursal {clave: 'SUC1'})-[r:TIENE_EMPLEADO]->(e:Empleado {tipo: 'Soporte Técnico'}), 
+(s2:Sucursal {clave: 'SUC2'})
+MERGE (s2)-[:TIENE_EMPLEADO]->(e)
+DELETE r;
+
+Q12. Reemplaza al gerente de una sucursal en específico.
+MATCH (s:Sucursal {clave: 'SUC1'})-[te:TIENE_EMPLEADO]->(e:Empleado {tipo: 'Gerente'})
+DELETE te
+WITH s
+MATCH (ng:Empleado {CURP: 'TOPE870301HDFRRL08'})
+MERGE (s)-[:TIENE_EMPLEADO]->(ng)
+
+Q13. Cambie un proyecto en específico a otra sucursal, incluyendo la totalidad de participantes en el proyecto.
+MATCH (p:Proyecto)-[ubi:UBICADO_EN]->(s1:Sucursal {clave: 'SUC1'})
+MATCH (s2:Sucursal {clave: 'SUC2'})
+MERGE (p)-[:UBICADO_EN]->(s2)
+DELETE ubi;
+
+Q14. Obtener la lista de clientes que nunca han realizado visitas a las sucursales.
+MATCH (c:Cliente)
+WHERE NOT (c)<-[:REALIZADA_POR]-(:Visita)
+RETURN c.nombre AS Cliente
+
+Q15. Todos los empleados de una sucursal determinada son transferidos a otra sucursal por cierre de sucursal de origen. 
+MATCH (s1:Sucursal {clave: 'SUC1'})-[te:TIENE_EMPLEADO]->(e:Empleado),
+(s2:Sucursal {clave: 'SUC2'})
+MERGE (s2)-[:TIENE_EMPLEADO]->(e)
+DELETE te;
+DETACH DELETE s1;
