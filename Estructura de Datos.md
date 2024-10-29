@@ -114,6 +114,7 @@ MERGE (s:Sucursal {clave: 'SUC2', nombre: 'Sucursal Guadalajara',  direccion: 'A
 MERGE (s:Sucursal {clave: 'SUC3', nombre: 'Sucursal CDMX',         direccion: 'Av. Tecnológico 56',    ciudad: 'Iztacalco',  capacidad: 10}) RETURN s;
 MERGE (s:Sucursal {clave: 'SUC4', nombre: 'Sucursal Tamaulipas',   direccion: 'Av. Del Ejército 78',   ciudad: 'Reynosa',    capacidad: 10}) RETURN s;
 MERGE (s:Sucursal {clave: 'SUC5', nombre: 'Sucursal Monterrey',    direccion: 'Av. De la Cultura 90',  ciudad: 'Apodaca',    capacidad: 10}) RETURN s;
+MERGE (s:Sucursal {clave: 'DOOM', nombre: 'Sucursal Pa Borrar',    direccion: 'Boulevard 173',         ciudad: 'Tepito',     capacidad: 10}) RETURN s;
 
 
 # Empleados - Gerentes
@@ -121,12 +122,14 @@ MERGE (e:Empleado {nombre: "Ana Gómez",      CURP: "GOMA901202MDFRRN03", telefo
 MERGE (e:Empleado {nombre: "Luis Morales",   CURP: "MOLU900101HDFRRR01", telefono: "555-5678", cuentaBancaria: "0987654321", fechaContratacion: "1990-01-01", tipo: "Gerente"}) RETURN e;  // Sucursal 2
 MERGE (e:Empleado {nombre: "María López",    CURP: "LOMA890303MDFRTR09", telefono: "555-2345", cuentaBancaria: "5678901234", fechaContratacion: "1989-03-03", tipo: "Gerente"}) RETURN e;  // Sucursal 3
 MERGE (e:Empleado {nombre: "Carlos Sánchez", CURP: "SACA910202HDFRLD04", telefono: "555-6789", cuentaBancaria: "4321098765", fechaContratacion: "1991-02-02", tipo: "Gerente"}) RETURN e;  // Sucursal 4
-MERGE (e:Empleado {nombre: "Julia Ramírez",  CURP: "RAJU871230MDFRRJ07", telefono: "555-7890", cuentaBancaria: "3210987654", fechaContratacion: "1987-12-30", tipo: "Gerente"}) RETURN e;  // Sucursal 5
+MERGE (e:Empleado {nombre: "Julia Ramírez",  CURP: "RAJU871230MDFRRJ07", telefono: "555-7890", cuentaBancaria: "3210987654", fechaContratacion: "1992-03-03", tipo: "Gerente"}) RETURN e;  // Sucursal 5
+MERGE (e:Empleado {nombre: "Super Gerente",  CURP: "SUPERGERENTE123456", telefono: "555-8901", cuentaBancaria: "2109876543", fechaContratacion: "1993-04-04", tipo: "Gerente"}) RETURN e;  // Sucursal 5
 
 # Empleados - Desarrolladores
 <!-- Sucursal 1 -->
 MERGE (e:Empleado {nombre: "Fernando Hernández", CURP: "HEFE881231HDFRRD02", telefono: "555-3456", cuentaBancaria: "4567890123", fechaContratacion: "1988-12-31", tipo: "Desarrollador", especializacion: "Backend"})    RETURN e;
 MERGE (e:Empleado {nombre: "Pedro Torres",       CURP: "TOPE870301HDFRRL08", telefono: "555-5670", cuentaBancaria: "8901234567", fechaContratacion: "1987-03-01", tipo: "Desarrollador", especializacion: "Full-stack"}) RETURN e;
+MERGE (e:Empleado {nombre: "Super Empleado",     CURP: "SUPEREMPLEADO12345", telefono: "555-i639", cuentaBancaria: "3947762902", fechaContratacion: "1988-04-02", tipo: "Desarrollador", especializacion: "Full-stack"}) RETURN e;
 <!-- Sucursal 2 -->
 MERGE (e:Empleado {nombre: "Sara Castillo",      CURP: "CASA900201MDFRRC06", telefono: "555-4567", cuentaBancaria: "6789012345", fechaContratacion: "1990-02-01", tipo: "Desarrollador", especializacion: "Frontend"})   RETURN e;
 MERGE (e:Empleado {nombre: "Laura Fernández",    CURP: "FELA920101MDFRRN01", telefono: "555-6781", cuentaBancaria: "5678901234", fechaContratacion: "1992-01-01", tipo: "Desarrollador", especializacion: "Backend"})    RETURN e;
