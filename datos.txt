@@ -3,7 +3,9 @@ MERGE (s:Sucursal {clave: 'SUC2', nombre: 'Sucursal Guadalajara',  direccion: 'A
 MERGE (s:Sucursal {clave: 'SUC3', nombre: 'Sucursal CDMX',         direccion: 'Av. Tecnológico 56',    ciudad: 'Iztacalco',  capacidad: 10}) RETURN s;
 MERGE (s:Sucursal {clave: 'SUC4', nombre: 'Sucursal Tamaulipas',   direccion: 'Av. Del Ejército 78',   ciudad: 'Reynosa',    capacidad: 10}) RETURN s;
 MERGE (s:Sucursal {clave: 'SUC5', nombre: 'Sucursal Monterrey',    direccion: 'Av. De la Cultura 90',  ciudad: 'Apodaca',    capacidad: 10}) RETURN s;
+MERGE (s:Sucursal {clave: 'DOOM', nombre: 'Sucursal Pa Borrar',    direccion: 'Boulevard 173',         ciudad: 'Tepito',     capacidad: 10}) RETURN s;
 
+MERGE (e:Empleado {nombre: "Super Gerente",  CURP: "SUPERGERENTE123456", telefono: "555-8901", cuentaBancaria: "2109876543", fechaContratacion: "1993-04-04", tipo: "Gerente"}) RETURN e;
 MERGE (e:Empleado {nombre: "Ana Gómez",      CURP: "GOMA901202MDFRRN03", telefono: "555-1234", cuentaBancaria: "1234567890", fechaContratacion: "1990-12-02", tipo: "Gerente"}) RETURN e;
 MERGE (e:Empleado {nombre: "Luis Morales",   CURP: "MOLU900101HDFRRR01", telefono: "555-5678", cuentaBancaria: "0987654321", fechaContratacion: "1990-01-01", tipo: "Gerente"}) RETURN e;
 MERGE (e:Empleado {nombre: "María López",    CURP: "LOMA890303MDFRTR09", telefono: "555-2345", cuentaBancaria: "5678901234", fechaContratacion: "1989-03-03", tipo: "Gerente"}) RETURN e;
@@ -20,6 +22,9 @@ MERGE (e:Empleado {nombre: "Miguel Vargas",      CURP: "VAMI871231HDFRRN04", tel
 MERGE (e:Empleado {nombre: "Patricia Peña",      CURP: "PEPA910102MDFRRR09", telefono: "555-1023", cuentaBancaria: "2109876543", fechaContratacion: "1991-01-02", tipo: "Desarrollador", especializacion: "Frontend"})   RETURN e;
 MERGE (e:Empleado {nombre: "Javier Gutiérrez",   CURP: "GUJA890203HDFRRR07", telefono: "555-2034", cuentaBancaria: "3456789123", fechaContratacion: "1989-02-03", tipo: "Desarrollador", especializacion: "Full-stack"}) RETURN e;
 MERGE (e:Empleado {nombre: "Sandra Mendoza",     CURP: "MESA921230MDFRRM05", telefono: "555-3045", cuentaBancaria: "6789012345", fechaContratacion: "1992-12-30", tipo: "Desarrollador", especializacion: "Frontend"})   RETURN e;
+MERGE (e:Empleado {nombre: "Super Empleado",     CURP: "SUPEREMPLEADO12345", telefono: "555-1639", cuentaBancaria: "3947762901", fechaContratacion: "1988-04-02", tipo: "Desarrollador", especializacion: "Full-stack"}) RETURN e;
+MERGE (e:Empleado {nombre: "Super Empleado2",    CURP: "SUPEREMPLEADO22345", telefono: "555-1739", cuentaBancaria: "3947762902", fechaContratacion: "1988-05-04", tipo: "Desarrollador", especializacion: "Backend"})    RETURN e;
+MERGE (e:Empleado {nombre: "Brandon Zuñiga",     CURP: "ZULB020916HNTXPRA0", telefono: "341-0725", cuentaBancaria: "3546513545", fechaContratacion: "2024-10-28", tipo: "Desarrollador", especializacion: "Backend"})    RETURN e;
 
 MERGE (e:Empleado {nombre: "Oscar López",          CURP: "LOOS900303HDFRRR01", telefono: "555-4560", cuentaBancaria: "8901234567", fechaContratacion: "1990-03-03", tipo: "Soporte Técnico", tipoSoporte: "Infraestructura"}) RETURN e;
 MERGE (e:Empleado {nombre: "Gabriela Ríos",        CURP: "RIGA920101MDFRRJ02", telefono: "555-5671", cuentaBancaria: "6789012345", fechaContratacion: "1992-01-01", tipo: "Soporte Técnico", tipoSoporte: "Software"})        RETURN e;
@@ -31,6 +36,9 @@ MERGE (e:Empleado {nombre: "Alejandro Navarro",    CURP: "NAAL900101HDFRRJ06", t
 MERGE (e:Empleado {nombre: "Verónica Delgado",     CURP: "DEVE911230MDFRRN09", telefono: "555-2035", cuentaBancaria: "3456789012", fechaContratacion: "1991-12-30", tipo: "Soporte Técnico", tipoSoporte: "Software"})        RETURN e;
 MERGE (e:Empleado {nombre: "Rodrigo Villanueva",   CURP: "VIRO870102HDFRRN02", telefono: "555-3046", cuentaBancaria: "8901234567", fechaContratacion: "1987-01-02", tipo: "Soporte Técnico", tipoSoporte: "Hardware"})        RETURN e;
 MERGE (e:Empleado {nombre: "Isabel Flores",        CURP: "FLIS900202MDFRRL03", telefono: "555-4561", cuentaBancaria: "1234567890", fechaContratacion: "1990-02-02", tipo: "Soporte Técnico", tipoSoporte: "Infraestructura"}) RETURN e;
+MERGE (e:Empleado {nombre: "Super Empleado3",      CURP: "SUPEREMPLEADO67890", telefono: "555-1349", cuentaBancaria: "0985734048", fechaContratacion: "1989-06-04", tipo: "Soporte Técnico", tipoSoporte: "Software"})        RETURN e;
+MERGE (e:Empleado {nombre: "Super Empleado4",      CURP: "SUPEREMPLEADO77890", telefono: "555-1249", cuentaBancaria: "0985734049", fechaContratacion: "1989-07-05", tipo: "Soporte Técnico", tipoSoporte: "Hardware"})        RETURN e;
+MERGE (e:Empleado {nombre: "Alfredo Tovar",        CURP: "NANO1234CACAHTNLXS", telefono: "102-1664", cuentaBancaria: "9826342331", fechaContratacion: "2024-10-29", tipo: "Soporte Técnico", tipoSoporte: "Software"})        RETURN e;
 
 MATCH (s:Sucursal {clave: 'SUC1'}), (e:Empleado {CURP: 'GOMA901202MDFRRN03'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
@@ -53,6 +61,8 @@ MATCH (s:Sucursal {clave: 'SUC2'}), (e:Empleado {CURP: 'DOFR870201HDFRRN04'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 MATCH (s:Sucursal {clave: 'SUC2'}), (e:Empleado {CURP: 'SIDA900202MDFRRL08'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'SUC2'}), (e:Empleado {CURP: 'ZULB020916HNTXPRA0'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 
 MATCH (s:Sucursal {clave: 'SUC3'}), (e:Empleado {CURP: 'LOMA890303MDFRTR09'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
@@ -63,6 +73,8 @@ MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 MATCH (s:Sucursal {clave: 'SUC3'}), (e:Empleado {CURP: 'CRER881202HDFRRJ03'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 MATCH (s:Sucursal {clave: 'SUC3'}), (e:Empleado {CURP: 'GAMA920303MDFRRL07'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'SUC3'}), (e:Empleado {CURP: 'NANO1234CACAHTNLXS'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 
 MATCH (s:Sucursal {clave: 'SUC4'}), (e:Empleado {CURP: 'SACA910202HDFRLD04'})
@@ -87,8 +99,19 @@ MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 MATCH (s:Sucursal {clave: 'SUC5'}), (e:Empleado {CURP: 'FLIS900202MDFRRL03'})
 MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 
+MATCH (s:Sucursal {clave: 'DOOM'}), (e:Empleado {CURP: 'SUPERGERENTE123456'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (e:Empleado {CURP: 'SUPEREMPLEADO12345'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (e:Empleado {CURP: 'SUPEREMPLEADO22345'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (e:Empleado {CURP: 'SUPEREMPLEADO67890'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (e:Empleado {CURP: 'SUPEREMPLEADO77890'})
+MERGE (s)-[:TIENE_EMPLEADO]->(e) RETURN s,e;
 
-MERGE (p:Proyecto {codigo: 'Proyecto1', nombre: 'Proyecto 1', descripcion: 'Algo algo este es el proyecto 1', fecha_inicio: date('2024-01-01'), fecha_fin: date('2024-08-11'), presupuesto: 50000}) RETURN p;
+
+MERGE (p:Proyecto {codigo: 'Proyecto1', nombre: 'Proyecto 1', descripcion: 'Algo algo este es el proyecto 1', fecha_inicio: date('2024-01-01'), fecha_fin: date('2024-08-11'), presupuesto: 500000}) RETURN p;
 MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado {CURP: 'GOMA901202MDFRRN03'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
 MATCH (p:Proyecto {codigo: 'Proyecto1'}), (e:Empleado {CURP: 'HEFE881231HDFRRD02'})
@@ -98,7 +121,7 @@ MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC1'}), (p:Proyecto {codigo: 'Proyecto1'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
-MERGE (p:Proyecto {codigo: 'Proyecto2', nombre: 'Proyecto 2', descripcion: 'Algo algo este es el proyecto 2', fecha_inicio: date('2024-02-02'), fecha_fin: date('2024-09-12'), presupuesto: 60000}) RETURN p;
+MERGE (p:Proyecto {codigo: 'Proyecto2', nombre: 'Proyecto 2', descripcion: 'Algo algo este es el proyecto 2', fecha_inicio: date('2024-02-02'), fecha_fin: date('2024-09-12'), presupuesto: 600000}) RETURN p;
 MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'MOLU900101HDFRRR01'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
 MATCH (p:Proyecto {codigo: 'Proyecto2'}), (e:Empleado {CURP: 'CASA900201MDFRRC06'})
@@ -108,7 +131,7 @@ MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC2'}), (p:Proyecto {codigo: 'Proyecto2'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
-MERGE (p:Proyecto {codigo: 'Proyecto3', nombre: 'Proyecto 3', descripcion: 'Algo algo este es el proyecto 3', fecha_inicio: date('2024-03-03'), fecha_fin: date('2024-10-13'), presupuesto: 70000}) RETURN p;
+MERGE (p:Proyecto {codigo: 'Proyecto3', nombre: 'Proyecto 3', descripcion: 'Algo algo este es el proyecto 3', fecha_inicio: date('2024-03-03'), fecha_fin: date('2024-10-13'), presupuesto: 700000}) RETURN p;
 MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'LOMA890303MDFRTR09'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
 MATCH (p:Proyecto {codigo: 'Proyecto3'}), (e:Empleado {CURP: 'JIRO850102HDFRMS05'})
@@ -118,7 +141,7 @@ MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC3'}), (p:Proyecto {codigo: 'Proyecto3'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
-MERGE (p:Proyecto {codigo: 'Proyecto4', nombre: 'Proyecto 4', descripcion: 'Algo algo este es el proyecto 4', fecha_inicio: date('2024-04-04'), fecha_fin: date('2024-11-14'), presupuesto: 80000}) RETURN p;
+MERGE (p:Proyecto {codigo: 'Proyecto4', nombre: 'Proyecto 4', descripcion: 'Algo algo este es el proyecto 4', fecha_inicio: date('2024-04-04'), fecha_fin: date('2024-11-14'), presupuesto: 800000}) RETURN p;
 MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'SACA910202HDFRLD04'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
 MATCH (p:Proyecto {codigo: 'Proyecto4'}), (e:Empleado {CURP: 'VAMI871231HDFRRN04'})
@@ -128,7 +151,7 @@ MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC4'}), (p:Proyecto {codigo: 'Proyecto4'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
-MERGE (p:Proyecto {codigo: 'Proyecto5', nombre: 'Proyecto 5', descripcion: 'Algo algo este es el proyecto 5', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 90000}) RETURN p;
+MERGE (p:Proyecto {codigo: 'Proyecto5', nombre: 'Proyecto 5', descripcion: 'Algo algo este es el proyecto 5', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 900000}) RETURN p;
 MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'RAJU871230MDFRRJ07'})
 MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
 MATCH (p:Proyecto {codigo: 'Proyecto5'}), (e:Empleado {CURP: 'GUJA890203HDFRRR07'})
@@ -138,11 +161,48 @@ MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
 MATCH (s:Sucursal {clave: 'SUC5'}), (p:Proyecto {codigo: 'Proyecto5'})
 MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
 
+
+MERGE (p:Proyecto {codigo: 'ProyectoG1', nombre: 'Proyecto G1', descripcion: 'Algo algo este es el proyecto G1', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 1000000}) RETURN p;
+MATCH (p:Proyecto {codigo: 'ProyectoG1'}), (e:Empleado {CURP: 'SUPERGERENTE123456'})
+MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG1'}), (e:Empleado {CURP: 'SUPEREMPLEADO12345'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG1'}), (e:Empleado {CURP: 'SUPEREMPLEADO67890'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG1'}), (e:Empleado {CURP: 'ZULB020916HNTXPRA0'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (p:Proyecto {codigo: 'ProyectoG1'})
+MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
+
+MERGE (p:Proyecto {codigo: 'ProyectoG2', nombre: 'Proyecto G2', descripcion: 'Algo algo este es el proyecto G2', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 1100000}) RETURN p;
+MATCH (p:Proyecto {codigo: 'ProyectoG2'}), (e:Empleado {CURP: 'SUPERGERENTE123456'})
+MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG2'}), (e:Empleado {CURP: 'SUPEREMPLEADO12345'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG2'}), (e:Empleado {CURP: 'SUPEREMPLEADO67890'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG2'}), (e:Empleado {CURP: 'NANO1234CACAHTNLXS'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (p:Proyecto {codigo: 'ProyectoG2'})
+MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
+
+MERGE (p:Proyecto {codigo: 'ProyectoG3', nombre: 'Proyecto G3', descripcion: 'Algo algo este es el proyecto G3', fecha_inicio: date('2024-05-05'), fecha_fin: date('2024-12-15'), presupuesto: 1200000}) RETURN p;
+MATCH (p:Proyecto {codigo: 'ProyectoG3'}), (e:Empleado {CURP: 'SUPERGERENTE123456'})
+MERGE (e)-[:GESTIONA]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG3'}), (e:Empleado {CURP: 'SUPEREMPLEADO12345'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (p:Proyecto {codigo: 'ProyectoG3'}), (e:Empleado {CURP: 'SUPEREMPLEADO67890'})
+MERGE (e)-[:TRABAJA_EN]->(p) RETURN p,e;
+MATCH (s:Sucursal {clave: 'DOOM'}), (p:Proyecto {codigo: 'ProyectoG3'})
+MERGE (p)-[:UBICADO_EN]->(s) RETURN s,p;
+
+
 MERGE (c:Cliente {nombre: 'Acme Corp',           empresa: 'Acme Corp',           telefono: '5598765432', correo: 'contacto@acmecorp.com'})         RETURN c;
 MERGE (c:Cliente {nombre: 'Global Solutions',    empresa: 'Global Solutions',    telefono: '5587654321', correo: 'info@globalsolutions.com'})      RETURN c;
 MERGE (c:Cliente {nombre: 'Innovatech',          empresa: 'Innovatech',          telefono: '5576543210', correo: 'contacto@innovatech.com'})       RETURN c;
 MERGE (c:Cliente {nombre: 'NextGen Industries',  empresa: 'NextGen Industries',  telefono: '5565432109', correo: 'support@nextgenindustries.com'}) RETURN c;
 MERGE (c:Cliente {nombre: 'Prime Services',      empresa: 'Prime Services',      telefono: '5554321098', correo: 'hello@primeservices.com'})       RETURN c;
+MERGE (c:Cliente {nombre: 'TechInsano',          empresa: 'TechInsano',          telefono: '5543210987', correo: 'soporte@insanos.com'})           RETURN c;
 
 MATCH (c:Cliente {nombre: 'Acme Corp'}), (p:Proyecto {codigo: 'Proyecto1'})
 MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
@@ -153,6 +213,12 @@ MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
 MATCH (c:Cliente {nombre: 'NextGen Industries'}), (p:Proyecto {codigo: 'Proyecto4'})
 MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
 MATCH (c:Cliente {nombre: 'Prime Services'}), (p:Proyecto {codigo: 'Proyecto5'})
+MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
+MATCH (c:Cliente {nombre: 'Prime Services'}), (p:Proyecto {codigo: 'ProyectoG1'})
+MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
+MATCH (c:Cliente {nombre: 'Prime Services'}), (p:Proyecto {codigo: 'ProyectoG2'})
+MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
+MATCH (c:Cliente {nombre: 'TechInsano'}), (p:Proyecto {codigo: 'ProyectoG3'})
 MERGE (c)-[:CONTRATA]->(p) RETURN c,p;
 
 MERGE (r:Reunion {fecha: date('2024-02-10'), hora: time('12:00'), motivo: 'Reunion para Proyecto 1'}) WITH r
@@ -200,6 +266,32 @@ MATCH (s:Sucursal {clave: 'SUC4'})
 MATCH (e1:Empleado {CURP: 'SACA910202HDFRLD04'})
 MATCH (e2:Empleado {CURP: 'VAMI871231HDFRRN04'})
 MATCH (e3:Empleado {CURP: 'VIRO870102HDFRRN02'})
+MERGE (r)-[rn:REUNION_EN]->(s)
+MERGE (c)-[a:ASISTENCIA]->(r)
+MERGE (e1)-[a1:ASISTENCIA]->(r)
+MERGE (e2)-[a2:ASISTENCIA]->(r)
+MERGE (e3)-[a3:ASISTENCIA]->(r)
+RETURN s,r,rn,c,e1,e2,e3,a,a1,a2,a3;
+
+MERGE (r:Reunion {fecha: date('2024-06-14'), hora: time('16:00'), motivo: 'Reunion para Proyecto 5'}) WITH r
+MATCH (c:Cliente {nombre: 'Prime Services'})
+MATCH (s:Sucursal {clave: 'SUC5'})
+MATCH (e1:Empleado {CURP: 'RAJU871230MDFRRJ07'})
+MATCH (e2:Empleado {CURP: 'GUJA890203HDFRRR07'})
+MATCH (e3:Empleado {CURP: 'LOOS900303HDFRRR01'})
+MERGE (r)-[rn:REUNION_EN]->(s)
+MERGE (c)-[a:ASISTENCIA]->(r)
+MERGE (e1)-[a1:ASISTENCIA]->(r)
+MERGE (e2)-[a2:ASISTENCIA]->(r)
+MERGE (e3)-[a3:ASISTENCIA]->(r)
+RETURN s,r,rn,c,e1,e2,e3,a,a1,a2,a3;
+
+MERGE (r:Reunion {fecha: date('2024-06-14'), hora: time('16:00'), motivo: 'Reunion para Proyecto 5'}) WITH r
+MATCH (c:Cliente {nombre: 'Prime Services'})
+MATCH (s:Sucursal {clave: 'SUC5'})
+MATCH (e1:Empleado {CURP: 'RAJU871230MDFRRJ07'})
+MATCH (e2:Empleado {CURP: 'GUJA890203HDFRRR07'})
+MATCH (e3:Empleado {CURP: 'LOOS900303HDFRRR01'})
 MERGE (r)-[rn:REUNION_EN]->(s)
 MERGE (c)-[a:ASISTENCIA]->(r)
 MERGE (e1)-[a1:ASISTENCIA]->(r)

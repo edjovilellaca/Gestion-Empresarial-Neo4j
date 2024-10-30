@@ -88,13 +88,13 @@ Visitas: (Visitas a las sucursales de los clientes) - (Relación)
 
 
 Consultas (Querys):
-Q00. Script del escenario de datos.
-Q01. Obtener la lista de sucursales que tienen más de 5 empleados.
-Q02. Encontrar los gerentes que gestionan más de 3 proyectos simultáneamente.
-Q03. Obtener la lista de desarrolladores con especialización en back-end que están trabajando en más de 2 proyectos.
-Q04. Obtener la lista de proyectos que tienen un presupuesto mayor a $1,000,000.
-Q05. Listar los empleados de soporte técnico de todas las sucursales
-Q06. Encontrar los proyectos que corresponden a un cliente en específico.
+Q00. Script del escenario de datos. //ya
+Q01. Obtener la lista de sucursales que tienen más de 5 empleados. //Ya
+Q02. Encontrar los gerentes que gestionan más de 3 proyectos simultáneamente. //Ya
+Q03. Obtener la lista de desarrolladores con especialización en back-end que están trabajando en más de 2 proyectos. //Ya
+Q04. Obtener la lista de proyectos que tienen un presupuesto mayor a $1,000,000. //Ya
+Q05. Listar los empleados de soporte técnico de todas las sucursales. //Ya
+Q06. Encontrar los proyectos que corresponden a un cliente en específico. //Ya
 Q07. Obtener la lista de sucursales que han recibido visitas de más de 5 clientes diferentes.
 Q08. Encontrar a los desarrolladores que han trabajado en proyectos con un presupuesto total mayor a $500,000.
 Q09. Obtener la lista de clientes que han contratado más de 3 proyectos en diferentes sucursales.
